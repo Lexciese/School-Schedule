@@ -1,4 +1,65 @@
 import tkinter as tk
 
-root = tk.Tk()
 
+Width = str(700)
+Height = str(450)
+
+root = tk.Tk()
+root.title("Jadwal X MIPA 4")
+window = root.resizable(False, False)
+master = tk.Canvas(root, width = Width, height = Height, bg = 'lightgrey', bd = 0)
+master.pack()
+
+waktu = tk.LabelFrame(master, text = "Waktu")
+waktu.grid(column = 0, row = 1)
+lWaktu = tk.Listbox(waktu) 
+lWaktu.insert(1, '07.30 – 09.30') 
+lWaktu.insert(2, '10.00 – 11.30') 
+lWaktu.insert(3, '12.30 – 14.00')
+lWaktu.insert(4, '14.00 – 14.45/15.30(Rabu)')
+lWaktu.pack()
+
+senin = tk.LabelFrame(master, text = "Senin")
+senin.grid(column = 1, row = 1)
+lSenin = tk.Listbox(senin) 
+lSenin.insert(1, 'Sejarah Indonesia') 
+lSenin.insert(2, 'Fisika') 
+lSenin.insert(3, 'Sosiologi') 
+lSenin.pack()
+
+selasa = tk.LabelFrame(master, text = "Selasa", relief = "groove")
+selasa.grid(column = 2, row = 1)
+lSelasa = tk.Listbox(selasa, highlightcolor = "white") 
+lSelasa.insert(1, 'Penjasorkes') 
+lSelasa.insert(2, 'Geografi (LM)') 
+lSelasa.insert(3, 'Kimia')
+lSelasa.insert(4, 'BK/BK TIK') 
+lSelasa.pack()
+
+rabu = tk.LabelFrame(master, text = "Rabu", relief = "groove")
+rabu.grid(column = 3, row = 1)
+lRabu = tk.Listbox(rabu, highlightcolor = "white") 
+lRabu.insert(1, 'Matematika Wajib') 
+lRabu.insert(2, 'Bhs. Inggris') 
+lRabu.insert(3, 'Bhs. Jawa')
+lRabu.insert(4, 'Prakarya(PKWU)') 
+lRabu.pack()
+
+kamis = tk.LabelFrame(master, text = "Kamis", relief = "groove")
+kamis.grid(column = 4, row = 1)
+lKamis = tk.Listbox(kamis, highlightcolor = "white") 
+lKamis.insert(1, 'Matematika Minat') 
+lKamis.insert(2, 'Biologi') 
+lKamis.insert(3, 'Seni Budaya (Musik)') 
+lKamis.pack()
+
+jumat = tk.LabelFrame(master, text = "Jum'at", relief = "groove")
+jumat.grid(column = 5, row = 1)
+lJumat = tk.Listbox(jumat, highlightcolor = "white") 
+lJumat.insert(1, 'Bhs. Indonesia') 
+lJumat.insert(2, 'PPKn') 
+lJumat.insert(3, 'Agama') 
+lJumat.pack()
+
+
+root.mainloop()
