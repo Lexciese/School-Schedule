@@ -226,4 +226,4 @@ def window():
 
 
 window()
-# pyinstaller -F --windowed --add-data "data.json;." app.py
+# pyinstaller --windowed --add-data "data.json;." app.py
