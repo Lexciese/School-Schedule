@@ -32,7 +32,7 @@ def windowError():
     root = tk.Tk()
     root.title("Error")
     root.geometry('{}x{}'.format(Width, Height))
-    # root.iconbitmap("Bin\\Images\\warning.ico")
+    root.iconbitmap("Bin\\Images\\warning.ico")
     root.resizable(False, False)
 
     Error = tk.Label(root, text = "Error's Encounter\n\nPlease Check/ Fix your 'UserData.json'\nIf you Get Confused/ Don't Know What's Wrong\nYou can validate your 'UserData.json' at \nhttps://jsonlint.com/\nJust Copy/ Paste all of the 'UserData.json' content to that site \nand you will know what's wrong")
@@ -69,7 +69,7 @@ def Help():
 
 
 class ManageData:
-    Size = ["700", "450"]
+    Size = ["700", "425"]
     jumlah = 0
     Datas = {
         "Icon": "",
@@ -117,7 +117,7 @@ class ManageData:
             data = loads(data_.read())
 
             for loop__ in range(1):
-                # self.Datas["Icon"] = data["Icon"]
+                self.Datas["Icon"] = data["Icon"]
                 self.Datas["Title"] = data["Title"]
                 self.Datas["Time"] = data["Time"]
 
@@ -174,7 +174,7 @@ class ManageData:
 
         root = tk.Tk()
         root.title(self.Datas["Title"])
-        # root.iconbitmap("Bin\\Images\\{}".format(self.Datas["Icon"])) # Here's to change in-window Icon
+        root.iconbitmap("Bin\\Images\\{}".format(self.Datas["Icon"])) # Here's to change in-window Icon
         root.resizable(False, False)
 
         master = tk.Canvas(root, width=Width, height=Height, bg='lightgrey')
@@ -336,8 +336,8 @@ else:
     pass
  
 # import cProfile
-# Profile
-# cProfile.run('windowApp()')
+
+# cProfile.run('d.windowApp()')
 
 
 # Convert to EXE commands --------------------------------------------------------------------------
