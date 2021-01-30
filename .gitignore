@@ -1,2 +1,7 @@
 *.log
+# Folder
 **/Build/
+**/Test/
+
+# VSCode
+*workspace.code-workspace
