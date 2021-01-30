@@ -1,4 +1,0 @@
-$ echo debug.log >> .gitignore 
-$ git rm --cached folder/\*
-$ git commit -m "Start ignoring debug.log"
-
