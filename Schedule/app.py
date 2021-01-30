@@ -3,8 +3,7 @@ import tkinter as tk
 from json import loads
 from os import startfile
 from subprocess import Popen as OpenFile
-# from sys import *
-# from constructor import *
+
 
 
 
@@ -56,7 +55,6 @@ def ChangeSubjects():
     windowAlert()
 
 
-
 def About():
     # os.system('notepad.exe {}'.format("Data/About.txt"))
     OpenFile(["notepad.exe", "Data/About.txt"], shell=True)
@@ -65,7 +63,6 @@ def About():
 def Help():
     # os.system('notepad.exe {}'.format("Data/Help.txt"))
     OpenFile(["notepad.exe", "Data/Help.txt"], shell=True)
-
 
 
 class ManageData:
@@ -116,7 +113,7 @@ class ManageData:
             data_ = open("Data/UserData.json")
             data = loads(data_.read())
 
-            for loop__ in range(1):
+            for loop_ in range(1):
                 self.Datas["Icon"] = data["Icon"]
                 self.Datas["Title"] = data["Title"]
                 self.Datas["Time"] = data["Time"]
@@ -257,8 +254,7 @@ class ManageData:
         if self.Datas["Days"]["Day3"]["Exist"] == False:
             pass
         else:
-            kamis = tk.LabelFrame(master, text=self.Datas["Days"]["Day3"]["Name"],
-                                relief="groove", font=('open sans', 10, "bold"))
+            kamis = tk.LabelFrame(master, text=self.Datas["Days"]["Day3"]["Name"], relief="groove", font=('open sans', 10, "bold"))
             kamis.grid(column=4, row=1)
             lKamis = tk.Listbox(kamis, highlightcolor="white")
             i = 0
@@ -320,13 +316,6 @@ class ManageData:
 
 
 d = ManageData()
-# d.readData()
-
-
-
-
-
-
 
 
 # Execute the App ----------------------------------------------------------------------------------
@@ -335,20 +324,14 @@ if d.isError == False:
 else:
     pass
  
-# import cProfile
 
+# import cProfile
 # cProfile.run('d.windowApp()')
 
 
 # Convert to EXE commands --------------------------------------------------------------------------
 # pyinstaller --windowed --add-data "data.json;." app.py
 # pyinstaller --distpath ..\Build\dist --workpath ..\Build\build app.spec
-
-
-
-
-
-
 
 
 # ------------------------------- app.spec ----------------------------------------------
